@@ -3,14 +3,14 @@
 import requests
 
 def cep (n):
-    
     url = 'http://viacep.com.br/ws/'+n+'/json/'
     dados = requests.get(url)
     return print (dados.json())
 
 
+# Imprimindo as informações linha a linha:
+
 def cep2 (n):
-    
     url = 'http://viacep.com.br/ws/'+n+'/json/'
     dados = requests.get(url)
     for chave, valor in dados.json().items():
